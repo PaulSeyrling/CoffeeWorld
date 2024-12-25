@@ -1,0 +1,3 @@
+[submodule "Desktop/Coding2Fun/tools/idasenController/elgato/src/my.domain.plugin-name/libs"]
+	path = Desktop/Coding2Fun/tools/idasenController/elgato/src/my.domain.plugin-name/libs
+	url = https://github.com/elgatosf/streamdeck-javascript-sdk
