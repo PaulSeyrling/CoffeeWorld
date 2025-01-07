@@ -1,0 +1,16 @@
+{
+    "version": 2,
+    "builds": [
+      {
+        "src": "api/coffee.js",
+        "use": "@vercel/node"
+      }
+    ],
+    "routes": [
+      {
+        "src": "/api/coffee/(.*)",
+        "dest": "/api/coffee.js"
+      }
+    ]
+  }
+  
