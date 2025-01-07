@@ -455,5 +455,5 @@ const coffeeData = [
         "Wiener Eiskaffee ist ein beliebtes, kaltes Kaffeegetränk, das warmen Kaffee mit Eiscreme vereint.",
     },
   ];
-  export default coffeeData;
+  module.exports = coffeeData;
   
