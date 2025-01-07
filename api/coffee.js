@@ -1,35 +1,33 @@
 // api/coffee.js
-const express = require('express');
-const app = express();
-
-// Importiere die Kaffee-Daten
 const coffeeData = require('../data/coffeeData');
 
-// API-Route für das Abrufen von Kaffeeinformationen nach ID
-app.get('/api/coffee/:id', (req, res) => {
-  const { id } = req.params;
-
-  // Suche nach dem Kaffee mit der angegebenen ID
-  const coffee = coffeeData.find(coffee => coffee.id === id);
-
-  if (coffee) {
-    res.json(coffee);  // Sende die Kaffeedaten zurück
-  } else {
-    res.status(404).json({ error: "Coffee not found" });  // Fehler, wenn kein Kaffee gefunden wurde
+module.exports = async (req, res) => {
+  // Enable CORS
+  res.setHeader('Access-Control-Allow-Origin', '*');
+  res.setHeader('Access-Control-Allow-Methods', 'GET, OPTIONS');
+  
+  // Handle OPTIONS request for CORS preflight
+  if (req.method === 'OPTIONS') {
+    res.status(200).end();
+    return;
   }
-});
-app.get('/api/coffee', (req, res) => {
-  const { id } = req.params;
 
-  // Suche nach dem Kaffee mit der angegebenen ID
-  const coffee = coffeeData;
+  const { id } = req.query;
 
-  if (coffee) {
-    res.json(coffee);  // Sende die Kaffeedaten zurück
+  if (req.method === 'GET') {
+    if (id) {
+      // Return specific coffee by ID
+      const coffee = coffeeData.find(coffee => coffee.id === id);
+      if (coffee) {
+        res.json(coffee);
+      } else {
+        res.status(404).json({ error: "Coffee not found" });
+      }
+    } else {
+      // Return all coffees if no ID is specified
+      res.json(coffeeData);
+    }
   } else {
-    res.status(404).json({ error: "Coffee not found" });  // Fehler, wenn kein Kaffee gefunden wurde
+    res.status(405).json({ error: "Method not allowed" });
   }
-});
-
-// This handler is exported so Vercel can use it as a serverless function
-module.exports = app;
+};
