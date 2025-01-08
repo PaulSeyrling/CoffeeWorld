@@ -1,5 +1,5 @@
 // api/coffee.js
-const coffeeData = require('../data/coffeeData');
+const coffeeData = require('../data/coffeeData.js');
 
 module.exports = async (req, res) => {
   // Enable CORS
