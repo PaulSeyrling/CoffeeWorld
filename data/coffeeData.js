@@ -2,17 +2,18 @@ const coffeeData = [
   {
     id: "espresso",
     name: "Espresso",
+    origin: "italy",
+    ratio: "1:2",
     ingredients: {
-      espresso: { min: 18, max: 18 },
-      milk: { min: 0, max: 0 },
-      foam: { min: 0, max: 0 },
+      espresso: { min: 25, max: 35 },
     },
-    caffeine: { min: 60, max: 70 },
-    origin: "Italy",
-    ratio: "1:2-1:3",
-    brewTime: "25-30 Sekunden",
-    pressure: "6-9 BAR",
-    temperature: "88-96°C",
+    cold: false,
+    caffeine: { min: 80, max: 85 },
+    pressure: "9",
+    temperature: "88-92°C",
+    temperatureF: "190-198°F",
+    brewTime: "25-30 ",
+    preparation: "coming soon",
   },
   {
     id: "ristretto",
@@ -25,9 +26,11 @@ const coffeeData = [
     caffeine: { min: 60, max: 70 },
     origin: "Italy",
     ratio: "1:1-1:1,5",
-    brewTime: "15-20 Sekunden",
-    pressure: "9-11 BAR",
+    brewTime: "15-20",
+    pressure: "9-11",
     temperature: "88-92°C",
+    temperatureF: "190-198°F",
+    preparation: "coming soon",
   },
   {
     id: "lungo",
@@ -40,9 +43,24 @@ const coffeeData = [
     caffeine: { min: 60, max: 70 },
     origin: "Italy",
     ratio: "1:3-1:4",
-    brewTime: "35-40 Sekunden",
-    pressure: "5-7 BAR",
-    temperature: "88-94°C",
+    brewTime: "35-40",
+    pressure: "5-7",
+    temperature: "88-92°C",
+    temperatureF: "190-198°F",
+    preparation: "coming soon",
+  },
+  {
+    id: "cappuccino",
+    name: "Cappuccino",
+    origin: "italy",
+    ingredients: {
+      espresso: { min: 25, max: 35 },
+      milk: { min: 25, max: 35 },
+      foam: { min: 25, max: 35 },
+    },
+    cold: false,
+    caffeine: { min: 80, max: 85 },
+    preparation: "coming soon",
   },
   {
     id: "americano",
@@ -55,17 +73,7 @@ const coffeeData = [
     },
     caffeine: { min: 58, max: 64 },
     origin: "USA",
-  },
-  {
-    id: "cappuccino",
-    name: "Cappuccino",
-    ingredients: {
-      espresso: { min: 18, max: 18 },
-      milk: { min: 54, max: 60 },
-      foam: { min: 54, max: 60 },
-    },
-    caffeine: { min: 58, max: 64 },
-    origin: "Italy",
+    preparation: "coming soon",
   },
   {
     id: "macchiato",
@@ -77,9 +85,9 @@ const coffeeData = [
     },
     caffeine: { min: 58, max: 64 },
     origin: "Italy",
-    traditionalRatio:
-      "Single Espresso, ein kleiner Schuss Milch und Milchschaum",
-    modernRatio: "1:1 Milch zu Espresso",
+    traditionalRatio: "Single espresso, a small dash of milk and milk foam",
+    modernRatio: "1:1 Milk to Espresso",
+    preparation: "coming soon",
   },
   {
     id: "caffe-latte",
@@ -91,6 +99,7 @@ const coffeeData = [
     },
     caffeine: { min: 116, max: 128 },
     origin: "Italy",
+    preparation: "coming soon",
   },
   {
     id: "mocha",
@@ -103,6 +112,7 @@ const coffeeData = [
     },
     caffeine: { min: 58, max: 64 },
     origin: "Italy",
+    preparation: "coming soon",
   },
   {
     id: "flat-white",
@@ -114,6 +124,7 @@ const coffeeData = [
     },
     caffeine: { min: 116, max: 128 },
     origin: "Australien/Neuseeland",
+    preparation: "coming soon",
   },
   {
     id: "piccolo-latte",
@@ -125,6 +136,7 @@ const coffeeData = [
     },
     caffeine: { min: 58, max: 64 },
     origin: "Australien",
+    preparation: "coming soon",
   },
   {
     id: "corretto",
@@ -137,6 +149,7 @@ const coffeeData = [
     },
     caffeine: { min: 58, max: 64 },
     origin: "Italy",
+    preparation: "coming soon",
   },
   {
     id: "freddo",
@@ -151,6 +164,7 @@ const coffeeData = [
     cold: true,
     caffeine: { min: 58, max: 64 },
     origin: "Italy",
+    preparation: "coming soon",
   },
   {
     id: "mokka_kleiner_schwarzer",
@@ -165,6 +179,7 @@ const coffeeData = [
     cold: false,
     caffeine: { min: 58, max: 64 },
     origin: "Austria",
+    preparation: "coming soon",
   },
   {
     id: "grosser_schwarzer",
@@ -179,6 +194,7 @@ const coffeeData = [
     cold: false,
     caffeine: { min: 116, max: 128 },
     origin: "Austria",
+    preparation: "coming soon",
   },
   {
     id: "kleiner_brauner",
@@ -194,6 +210,7 @@ const coffeeData = [
     cold: false,
     caffeine: { min: 58, max: 64 },
     origin: "Austria",
+    preparation: "coming soon",
   },
   {
     id: "grosser_brauner",
@@ -209,6 +226,7 @@ const coffeeData = [
     cold: false,
     caffeine: { min: 116, max: 128 },
     origin: "Austria",
+    preparation: "coming soon",
   },
   {
     id: "franziskaner",
@@ -224,6 +242,7 @@ const coffeeData = [
     cold: false,
     caffeine: { min: 58, max: 64 },
     origin: "Austria",
+    preparation: "coming soon",
   },
   {
     id: "wiener_melange",
@@ -238,6 +257,7 @@ const coffeeData = [
     cold: false,
     caffeine: { min: 58, max: 64 },
     origin: "Austria",
+    preparation: "coming soon",
   },
   {
     id: "kleines_schalerl_gold",
@@ -252,6 +272,7 @@ const coffeeData = [
     cold: false,
     caffeine: { min: 58, max: 64 },
     origin: "Austria",
+    preparation: "coming soon",
   },
   {
     id: "verkehrter_kaffee",
@@ -266,6 +287,7 @@ const coffeeData = [
     cold: false,
     caffeine: { min: 58, max: 64 },
     origin: "Austria",
+    preparation: "coming soon",
   },
   {
     id: "kapuziner",
@@ -281,6 +303,7 @@ const coffeeData = [
     cold: false,
     caffeine: { min: 58, max: 64 },
     origin: "Austria",
+    preparation: "coming soon",
   },
   {
     id: "fiaker",
@@ -297,6 +320,7 @@ const coffeeData = [
     cold: false,
     caffeine: { min: 116, max: 128 },
     origin: "Austria",
+    preparation: "coming soon",
   },
   {
     id: "einspaenner",
@@ -312,6 +336,7 @@ const coffeeData = [
     cold: false,
     caffeine: { min: 116, max: 128 },
     origin: "Austria",
+    preparation: "coming soon",
   },
   {
     id: "kosakenkaffee",
@@ -327,6 +352,7 @@ const coffeeData = [
     cold: false,
     caffeine: { min: 58, max: 64 },
     origin: "Austria",
+    preparation: "coming soon",
   },
   {
     id: "zarenkaffee",
@@ -342,6 +368,7 @@ const coffeeData = [
     cold: false,
     caffeine: { min: 58, max: 64 },
     origin: "Austria",
+    preparation: "coming soon",
   },
   {
     id: "wiener_eiskaffee",
@@ -357,6 +384,9 @@ const coffeeData = [
     cold: true,
     caffeine: { min: 116, max: 128 },
     origin: "Austria",
+    preparation: "coming soon",
   },
 ];
-module.exports = coffeeData;
+
+// Export für ES Modules
+export default coffeeData;
