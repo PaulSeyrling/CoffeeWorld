@@ -1,0 +1,215 @@
+[
+  {
+    "id": "espresso",
+    "name": "Espresso",
+    "origin": "italy",
+    "ratio": "1:2",
+    "ingredients": {
+      "espresso": { "min": 25, "max": 35 }
+    },
+    "cold": false,
+    "caffeine": { "min": 80, "max": 85 },
+    "pressure": "9",
+    "temperature": "88-92°C",
+    "temperatureF": "190-198°F",
+    "brewTime": "25-30",
+    "preparation": "coming soon"
+  },
+  {
+    "id": "ristretto",
+    "name": "Ristretto",
+    "ingredients": {
+      "ristretto": { "min": 15, "max": 15 },
+      "milk": { "min": 0, "max": 0 },
+      "foam": { "min": 0, "max": 0 }
+    },
+    "caffeine": { "min": 60, "max": 70 },
+    "origin": "Italy",
+    "ratio": "1:1-1:1,5",
+    "brewTime": "15-20",
+    "pressure": "9-11",
+    "temperature": "88-92°C",
+    "temperatureF": "190-198°F",
+    "preparation": "coming soon"
+  },
+  {
+    "id": "lungo",
+    "name": "Lungo",
+    "ingredients": {
+      "lungo": { "min": 50, "max": 50 },
+      "milk": { "min": 0, "max": 0 },
+      "foam": { "min": 0, "max": 0 }
+    },
+    "caffeine": { "min": 60, "max": 70 },
+    "origin": "Italy",
+    "ratio": "1:3-1:4",
+    "brewTime": "35-40",
+    "pressure": "5-7",
+    "temperature": "88-92°C",
+    "temperatureF": "190-198°F",
+    "preparation": "coming soon"
+  },
+  {
+    "id": "cappuccino",
+    "name": "Cappuccino",
+    "origin": "italy",
+    "ingredients": {
+      "espresso": { "min": 25, "max": 35 },
+      "milk": { "min": 25, "max": 35 },
+      "foam": { "min": 25, "max": 35 }
+    },
+    "cold": false,
+    "caffeine": { "min": 80, "max": 85 },
+    "preparation": "coming soon"
+  },
+  {
+    "id": "americano",
+    "name": "Caffè Americano",
+    "ingredients": {
+      "espresso": { "min": 18, "max": 18 },
+      "milk": { "min": 0, "max": 0 },
+      "foam": { "min": 0, "max": 0 },
+      "water": { "min": 90, "max": 90 }
+    },
+    "caffeine": { "min": 58, "max": 64 },
+    "origin": "USA",
+    "preparation": "coming soon"
+  },
+  {
+    "id": "macchiato",
+    "name": "Espresso Macchiato",
+    "ingredients": {
+      "espresso": { "min": 18, "max": 18 },
+      "milk": { "min": 10, "max": 10 },
+      "foam": { "min": 10, "max": 10 }
+    },
+    "caffeine": { "min": 58, "max": 64 },
+    "origin": "Italy",
+    "traditionalRatio": "Single espresso, a small dash of milk and milk foam",
+    "modernRatio": "1:1 Milk to Espresso",
+    "preparation": "coming soon"
+  },
+  {
+    "id": "caffe-latte",
+    "name": "Caffè Latte",
+    "ingredients": {
+      "espresso": { "min": 36, "max": 36 },
+      "milk": { "min": 240, "max": 240 },
+      "foam": { "min": 10, "max": 10 }
+    },
+    "caffeine": { "min": 116, "max": 128 },
+    "origin": "Italy",
+    "preparation": "coming soon"
+  },
+  {
+    "id": "mocha",
+    "name": "Caffè Mocha",
+    "ingredients": {
+      "espresso": { "min": 18, "max": 18 },
+      "milk": { "min": 60, "max": 60 },
+      "foam": { "min": 0, "max": 0 },
+      "cocoa": { "min": 30, "max": 30 }
+    },
+    "caffeine": { "min": 58, "max": 64 },
+    "origin": "Italy",
+    "preparation": "coming soon"
+  },
+  {
+    "id": "flat-white",
+    "name": "Flat White",
+    "ingredients": {
+      "espresso": { "min": 36, "max": 36 },
+      "milk": { "min": 120, "max": 120 },
+      "foam": { "min": 0, "max": 0 }
+    },
+    "caffeine": { "min": 116, "max": 128 },
+    "origin": "Australien/Neuseeland",
+    "preparation": "coming soon"
+  },
+  {
+    "id": "piccolo-latte",
+    "name": "Piccolo Latte",
+    "ingredients": {
+      "espresso": { "min": 18, "max": 18 },
+      "milk": { "min": 60, "max": 60 },
+      "foam": { "min": 10, "max": 10 }
+    },
+    "caffeine": { "min": 58, "max": 64 },
+    "origin": "Australien",
+    "preparation": "coming soon"
+  },
+  {
+    "id": "corretto",
+    "name": "Espresso Corretto",
+    "ingredients": {
+      "espresso": { "min": 18, "max": 18 },
+      "milk": { "min": 0, "max": 0 },
+      "foam": { "min": 0, "max": 0 },
+      "alcohol": { "min": 10, "max": 10 }
+    },
+    "caffeine": { "min": 58, "max": 64 },
+    "origin": "Italy",
+    "preparation": "coming soon"
+  },
+  {
+    "id": "freddo",
+    "name": "Caffè Freddo",
+    "ingredients": {
+      "espresso": { "min": 18, "max": 18 },
+      "milk": { "min": 0, "max": 0 },
+      "foam": { "min": 0, "max": 0 },
+      "water": { "min": 60, "max": 60 },
+      "sugar": { "min": 10, "max": 10 }
+    },
+    "cold": true,
+    "caffeine": { "min": 58, "max": 64 },
+    "origin": "Italy",
+    "preparation": "coming soon"
+  },
+  {
+    "id": "mokka_kleiner_schwarzer",
+    "name": "Mokka / Kleiner Schwarzer",
+    "ingredients": {
+      "mokka": { "min": 18, "max": 18 },
+      "milk": { "min": 0, "max": 0 },
+      "foam": { "min": 0, "max": 0 },
+      "water": { "min": 0, "max": 0 },
+      "sugar": { "min": 0, "max": 0 }
+    },
+    "cold": false,
+    "caffeine": { "min": 58, "max": 64 },
+    "origin": "Austria",
+    "preparation": "coming soon"
+  },
+  {
+    "id": "grosser_schwarzer",
+    "name": "Großer Schwarzer",
+    "ingredients": {
+      "mokka": { "min": 36, "max": 36 },
+      "milk": { "min": 0, "max": 0 },
+      "foam": { "min": 0, "max": 0 },
+      "water": { "min": 0, "max": 0 },
+      "sugar": { "min": 0, "max": 0 }
+    },
+    "cold": false,
+    "caffeine": { "min": 116, "max": 128 },
+    "origin": "Austria",
+    "preparation": "coming soon"
+  },
+  {
+    "id": "kleiner_brauner",
+    "name": "Kleiner Brauner",
+    "ingredients": {
+      "mokka": { "min": 18, "max": 18 },
+      "milk": { "min": 0, "max": 0 },
+      "foam": { "min": 0, "max": 0 },
+      "water": { "min": 0, "max": 0 },
+      "sugar": { "min": 0, "max": 0 },
+      "whipped_cream": { "min": 20, "max": 20 }
+    },
+    "cold": false,
+    "caffeine": { "min": 58, "max": 64 },
+    "origin": "Austria",
+    "preparation": "coming soon"
+  }
+]
