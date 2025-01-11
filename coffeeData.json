@@ -13,8 +13,7 @@
     "temperature": "88-92°C",
     "temperatureF": "190-198°F",
     "brewTime": "25-30",
-    "preparation": "coming soon",
-    "image": "https://images.unsplash.com/photo-1610889556528-9a770e32642f?q=80&w=2030&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "preparation": "coming soon"
   },
   {
     "id": "ristretto",
